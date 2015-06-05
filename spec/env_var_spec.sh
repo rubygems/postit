@@ -1,6 +1,6 @@
 out=$(BUNDLER_VERSION=1.10.2 bvm -v)
 expected="Bundler version 1.10.2"
-if [ "$out" == "$expected" ]
+if [ "$out" = "$expected" ]
 then
   printf '.'
 else

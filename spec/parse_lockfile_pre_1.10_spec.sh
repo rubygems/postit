@@ -98,7 +98,7 @@ L
 
 out=$(bvm -v)
 expected="Bundler version 1.9.9"
-if [ "$out" == "$expected" ]
+if [ "$out" = "$expected" ]
 then
   printf '.'
 else

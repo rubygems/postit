@@ -1,5 +1,5 @@
 out=$(bvm -v)
-if [ "$out" == "$(bundle -v)" ]
+if [ "$out" = "$(bundle -v)" ]
 then
   printf '.'
 else
