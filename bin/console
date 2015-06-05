@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require "bvm"
+
+require "irb"
+IRB.start

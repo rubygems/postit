@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'bvm'
+BVM.setup
+load Gem.bin_path('bundler', 'bundle', BVM.bundler_version)
