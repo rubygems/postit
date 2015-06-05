@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
 
+gem install bundler -v '< 1.10'
 gem install bundler -v 1.10.2
 gem install bundler -v 1.10.3

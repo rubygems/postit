@@ -9,6 +9,8 @@ module BVM
       return unless lockfile
       if lockfile =~ /\n\nBUNDLED WITH\n\s{2,}(#{Gem::Version::VERSION_PATTERN})\n/
         $1
+      else
+        '< 1.10'
       end
     end
   end

@@ -1,4 +1,5 @@
 require 'bvm/version'
+require 'bvm/environment'
 require 'bvm/parser'
 require 'rubygems'
 
