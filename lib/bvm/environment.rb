@@ -7,16 +7,15 @@ module BVM
     end
 
     def env_var_version
-      version = ENV['BUNDLER_VERSION']
+      ENV['BUNDLER_VERSION']
     end
 
     def cli_arg_version
-      if str = @argv.first
-        str = str.dup.force_encoding("BINARY") if str.respond_to? :force_encoding
-        if Gem::Version.correct?(str)
-          @argv.shift
-          str
-        end
+      return unless str = @argv.first
+      str = str.dup.force_encoding('BINARY') if str.respond_to?(:force_encoding)
+      if Gem::Version.correct?(str)
+        @argv.shift
+        str
       end
     end
 
@@ -36,7 +35,10 @@ module BVM
     end
 
     def bundler_version
-      @bundler_version ||= env_var_version || cli_arg_version || lockfile_version || Gem::Requirement.default
+      @bundler_version ||= begin
+        env_var_version || cli_arg_version ||
+          lockfile_version || Gem::Requirement.default
+      end
     end
   end
 end

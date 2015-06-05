@@ -1,12 +1,11 @@
 cat <<L > foo.rb
-#!/usr/bin/env ruby
 require 'bvm/setup'
-print Bundler::Version
+print Bundler::VERSION
 L
 
 out=$(BUNDLER_VERSION="1.10.2" ruby foo.rb)
 expected="1.10.2"
-if [ "$out" == "$expected" ]
+if [ "$out" = "$expected" ]
 then
   printf '.'
 else
