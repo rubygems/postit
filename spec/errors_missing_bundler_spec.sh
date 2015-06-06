@@ -2,7 +2,7 @@ cat <<L > Gemfile.lock
 
 
 BUNDLED WITH
-  1.0.0
+  99999999.0.0
 
 L
 
@@ -18,8 +18,8 @@ contains() {
 }
 
 out=$(bvm -v 2>&1)
-expected="Unable to find bundler (1.0.0). Please run \`gem install bundler -v 1.0.0\` and try again."
-if contains "$out" "$expected" == 0 
+expected="Unable to resolve dependency: user requested 'bundler (= 99999999.0.0)"
+if contains "$out" "$expected" == 0
 then
   printf '.'
 else
