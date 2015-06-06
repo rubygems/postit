@@ -1,6 +1,6 @@
-require 'bvm/parser'
+require 'postit/parser'
 
-module BVM
+module PostIt
   class Environment
     def initialize(argv)
       @argv = argv
@@ -31,7 +31,7 @@ module BVM
     end
 
     def lockfile_version
-      BVM::Parser.new(lockfile).parse
+      PostIt::Parser.new(lockfile).parse
     end
 
     def bundler_version

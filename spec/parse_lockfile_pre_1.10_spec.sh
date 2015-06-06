@@ -96,7 +96,7 @@ DEPENDENCIES
   thin
 L
 
-out=$(bvm -v)
+out=$(postit -v)
 expected="Bundler version 1.9.9"
 if [ "$out" = "$expected" ]
 then

@@ -1,4 +1,4 @@
-out=$(bvm -v)
+out=$(postit -v)
 if [ "$out" = "$(bundle -v)" ]
 then
   printf '.'

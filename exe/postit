@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'postit'
+PostIt.setup
+load Gem.bin_path('bundler', 'bundle', PostIt.bundler_version)

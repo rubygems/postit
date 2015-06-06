@@ -17,7 +17,7 @@ contains() {
     fi
 }
 
-out=$(bvm -v 2>&1)
+out=$(postit -v 2>&1)
 expected="Unable to resolve dependency: user requested 'bundler (= 99999999.0.0)"
 if contains "$out" "$expected" == 0
 then

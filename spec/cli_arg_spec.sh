@@ -1,4 +1,4 @@
-out=$(bvm 1.10.2 -v)
+out=$(postit 1.10.2 -v)
 expected="Bundler version 1.10.2"
 if [ "$out" = "$expected" ]
 then

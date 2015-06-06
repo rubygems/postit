@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'bvm/version'
+require 'postit/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'bvm'
-  spec.version       = BVM::VERSION
+  spec.name          = 'postit'
+  spec.version       = PostIt::VERSION
   spec.authors       = ['Samuel Giddins']
   spec.email         = ['segiddins@segiddins.me']
 
   spec.summary       = 'The Bundler version manager'
-  spec.homepage      = 'https://github.com/segiddins/bvm'
+  spec.homepage      = 'https://github.com/segiddins/postit'
 
   spec.files         = `git ls-files -z`.split("\x0")
     .reject { |f| f.match(%r{^(test|spec|features)/}) }

@@ -1,5 +1,5 @@
 cat <<L > foo.rb
-require 'bvm/setup'
+require 'postit/setup'
 print Bundler::VERSION
 L
 

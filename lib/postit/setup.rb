@@ -1,6 +1,6 @@
-require 'bvm/environment'
+require 'postit/environment'
 
-environment = BVM::Environment.new(ARGV)
+environment = PostIt::Environment.new(ARGV)
 version = environment.bundler_version
 
 loop do

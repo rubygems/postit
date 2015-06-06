@@ -1,5 +1,5 @@
 require 'rubygems'
-GEMSPEC = Gem::Specification.load('bvm.gemspec')
+GEMSPEC = Gem::Specification.load('postit.gemspec')
 
 desc "Installs all development dependencies"
 task :bootstrap do

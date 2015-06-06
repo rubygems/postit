@@ -1,4 +1,4 @@
-module BVM
+module PostIt
   class Parser
     def initialize(file)
       @file = file
