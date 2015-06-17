@@ -2,4 +2,8 @@
 
 require 'postit'
 PostIt.setup
-load Gem.bin_path('bundler', 'bundle', PostIt.bundler_version)
+if ARGV == %w(--bundler-version)
+  puts PostIt.bundler_version
+else
+  load Gem.bin_path('bundler', 'bundle', PostIt.bundler_version)
+end
