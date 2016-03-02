@@ -3,6 +3,6 @@ if [ "$out" = "$(bundle -v)" ]
 then
   printf '.'
 else
-  echo "Expected '$(bundle -v)', got '$out'"
+  echo "\nFailure in $0\nExpected '$(bundle -v)', got '$out'"
   exit 1
 fi

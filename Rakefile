@@ -18,7 +18,7 @@ require 'tmpdir'
 
 desc 'Run the specs'
 task :spec do
-  puts 'Running specs...'
+  print 'Running specs'
   files = FileList['spec/**/*_spec.sh'].shuffle.map { |s| File.expand_path(s) }
   files.each do |spec|
     Dir.mktmpdir do |dir|
@@ -35,7 +35,7 @@ end
 require 'rubocop/rake_task'
 RuboCop::RakeTask.new
 
-task :ci => [:spec, :rubocop]
+task :default => [:spec, :rubocop]
 
 rescue LoadError, NameError
   warn "Please run rake bootstrap"
