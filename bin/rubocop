@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+gemspec = Gem::Specification.load(
+  File.expand_path('../../postit.gemspec', __FILE__))
+gemspec.development_dependencies.each do |dep|
+  gem dep.name, dep.requirement.to_s
+end
+
+load Gem.bin_path('rubocop', 'rubocop')
