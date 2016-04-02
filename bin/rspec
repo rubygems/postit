@@ -4,8 +4,9 @@ require 'rubygems'
 gemspec = Gem::Specification.load(
   File.expand_path('../../postit.gemspec', __FILE__))
 gemspec.development_dependencies.each do |dep|
+  next if dep.name == 'rubocop' && RUBY_VERSION < '1.9.3'
   gem dep.name, dep.requirement.to_s
 end
 Gem.finish_resolve if Gem.respond_to?(:finish_resolve)
 
-load Gem.bin_path('rubocop', 'rubocop')
+load Gem.bin_path('rspec-core', 'rspec')
