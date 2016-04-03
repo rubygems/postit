@@ -7,7 +7,7 @@ describe PostIt::Parser do
 
   before do
     FileUtils.mkdir_p(File.dirname(file))
-    File.write(file, contents) if contents
+    File.open(file, 'w') { |f| f << contents } if contents
   end
 
   after do

@@ -4,6 +4,7 @@ GEMSPEC = Gem::Specification.load('postit.gemspec')
 desc "Installs all development dependencies"
 task :bootstrap do
   GEMSPEC.development_dependencies.each do |dep|
+    next if dep.name == 'rubocop' && RUBY_VERSION < '1.9.3'
     sh 'gem', 'install', dep.name, '-v', dep.requirement.to_s
   end
 end
