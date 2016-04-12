@@ -1,4 +1,5 @@
-# PostIt ## The Bundler Version Manager
+# PostIt
+## The Bundler Version Manager
 
 ```bash
 $ gem install postit
