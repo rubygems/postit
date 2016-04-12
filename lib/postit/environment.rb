@@ -37,7 +37,7 @@ module PostIt
     def bundler_version
       @bundler_version ||= begin
         env_var_version || cli_arg_version ||
-          lockfile_version || Gem::Requirement.default
+          lockfile_version || "#{Gem::Requirement.default}.a"
       end
     end
   end

@@ -1,5 +1,14 @@
 language: ruby
+branches:
+  only:
+    - master
+    - auto
 rvm:
+  - 1.8.7
+  - 1.9.3
+  - 2.0.0
+  - 2.1.7
   - 2.2.2
+  - 2.3.0
 before_install: ./bin/setup
-script: rake ci
+script: rake

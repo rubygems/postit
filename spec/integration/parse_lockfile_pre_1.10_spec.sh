@@ -94,17 +94,14 @@ DEPENDENCIES
   sinatra
   terminal-table
   thin
-
-BUNDLED WITH
-   1.10.2
 L
 
 out=$(postit -v)
-expected="Bundler version 1.10.2"
+expected="Bundler version 1.9.10"
 if [ "$out" = "$expected" ]
 then
   printf '.'
 else
-  echo "Expected '$expected', got '$out'"
+  echo "\nFailure in $0\nExpected '$expected', got '$out'"
   exit 1
 fi

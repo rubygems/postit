@@ -9,6 +9,6 @@ if [ "$out" = "$expected" ]
 then
   printf '.'
 else
-  echo "Expected '$expected', got '$out'"
+  echo "\nFailure in $0\nExpected '$expected', got '$out'"
   exit 1
 fi
