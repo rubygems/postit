@@ -6,6 +6,7 @@ AllCops:
   Exclude:
     - ./spec/fixtures/**/*
     - ./vendor/bundle/**/*
+    - ./tmp/**/*
 
 # At the moment not ready to be used
 # https://github.com/bbatsov/rubocop/issues/947
