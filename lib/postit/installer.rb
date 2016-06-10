@@ -8,9 +8,9 @@ module PostIt
       if Gem::Specification.respond_to?(:find_by_name)
         !Gem::Specification.find_by_name('bundler', @bundler_version).nil?
       else
-        dep = Gem::Dependency.new('bundler', @bundler_version)
+        requirement = Gem::Requirement.new(@bundler_version)
         Gem.source_index.gems.values.any? do |s|
-          dep.match?(s.name, s.version)
+          s.name == 'bundler' && requirement.satisfied_by?(s.version)
         end
       end
     rescue LoadError
