@@ -19,7 +19,7 @@ module PostIt
 
     def install!
       return if installed?
-      require "rubygems/dependency_installer"
+      require 'rubygems/dependency_installer'
       installer = Gem::DependencyInstaller.new
       installer.install('bundler', @bundler_version)
       installer.installed_gems
