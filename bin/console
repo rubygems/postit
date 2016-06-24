@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+load File.expand_path('../with_rubygems', __FILE__) if ENV['RGV']
+
 require 'postit'
 
 require 'irb'

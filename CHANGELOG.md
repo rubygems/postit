@@ -1,3 +1,15 @@
+## Master
+
+##### Enhancements
+
+* Support RubyGems back to 1.3.6.  
+  [Samuel Giddins](https://github.com/segiddins)
+
+* Refactor installation so the installer can be used separately from
+  `postit/setup`.  
+  [Samuel Giddins](https://github.com/segiddins)
+
+
 ## 0.1.2 (2016-04-25)
 
 ##### Enhancements
@@ -6,7 +18,7 @@
   [Samuel Giddins](https://github.com/segiddins)
   [#2](https://github.com/bundler/postit/issues/2)
 
-##### Enhancements
+##### Bug Fixes
 
 * Invoke a pre-release bundler version if no particular requirement is needed,
   in keeping with recent RubyGems versions.  

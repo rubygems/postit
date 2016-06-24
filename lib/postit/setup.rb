@@ -1,16 +1,12 @@
 require 'postit/environment'
+require 'postit/installer'
 
 environment = PostIt::Environment.new(ARGV)
 version = environment.bundler_version
 
-loop do
-  begin
-    gem 'bundler', version
-    break
-  rescue Gem::LoadError
-    nil
-  end
-  Gem.install('bundler', version)
-end
+installer = PostIt::Installer.new(version)
+installer.install!
+
+gem 'bundler', version
 
 require 'bundler/version'

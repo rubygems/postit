@@ -1,6 +1,7 @@
-require 'postit/version'
 require 'postit/environment'
+require 'postit/installer'
 require 'postit/parser'
+require 'postit/version'
 require 'rubygems'
 
 module PostIt

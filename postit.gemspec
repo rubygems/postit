@@ -5,7 +5,7 @@ require 'postit/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'postit'
-  spec.version       = PostIt::VERSION
+  spec.version       = PostIt::VERSION.dup
   spec.authors       = ['Samuel Giddins']
   spec.email         = ['segiddins@segiddins.me']
 
